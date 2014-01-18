@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gEC-pV-TR3"/>
+                        <viewControllerLayoutGuide type="bottom" id="3HI-WM-33C"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w6W-Ds-3U6">
+                                <rect key="frame" x="20" y="39" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="32" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="rrn-ac-wP5">
+                                <rect key="frame" x="113" y="120" width="94" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <action selector="onChange:" destination="vXZ-lx-hvc" eventType="valueChanged" id="lQf-hB-XbE"/>
+                                </connections>
+                            </stepper>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="wedge.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="nq9-9a-Hoh">
+                                <rect key="frame" x="20" y="205" width="88" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Iron.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="OG9-0S-Vw3">
+                                <rect key="frame" x="116" y="205" width="88" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="driver.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="f0l-Zh-hWY">
+                                <rect key="frame" x="212" y="205" width="88" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ykp-O6-LPd">
+                                <rect key="frame" x="55" y="375" width="211" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Calculate Distance">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toCalc:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="0sB-vN-uUf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lOU-qg-SUE">
+                                <rect key="frame" x="264" y="390" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="getAuthor:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="13C-rr-zeD"/>
+                                    <segue destination="akg-F0-l9g" kind="modal" modalTransitionStyle="crossDissolve" id="jtx-st-gn1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tIy-Ec-vBr">
+                                <rect key="frame" x="35" y="306" width="58" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Wedge">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="mQz-f3-gez"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJi-2v-16e">
+                                <rect key="frame" x="135" y="306" width="50" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Iron">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="cOf-pe-dlI"/>
+                                    <segue destination="LLO-bo-Hc5" kind="modal" modalTransitionStyle="crossDissolve" id="blF-UX-aEI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Xf-jD-VKG">
+                                <rect key="frame" x="227" y="306" width="59" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Driver">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="tiF-uL-SsY"/>
+                                    <segue destination="Sbr-IZ-Hl1" kind="modal" modalTransitionStyle="crossDissolve" id="x9U-I1-qWr"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1XO-EH-vSG">
+                                <rect key="frame" x="0.0" y="450" width="320" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Wedge"/>
+                                    <segment title="Iron"/>
+                                    <segment title="Driver"/>
+                                </segments>
+                                <connections>
+                                    <action selector="onSegment:" destination="vXZ-lx-hvc" eventType="valueChanged" id="TI7-2K-wUO"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="driButton" destination="8Xf-jD-VKG" id="ZGa-nc-oAr"/>
+                        <outlet property="iroButton" destination="tJi-2v-16e" id="fGc-qY-leD"/>
+                        <outlet property="stepperText" destination="w6W-Ds-3U6" id="GZq-E2-IU4"/>
+                        <outlet property="wedButton" destination="tIy-Ec-vBr" id="ijl-bu-9vy"/>
+                        <outlet property="wedText" destination="w6W-Ds-3U6" id="zvN-V4-yBd"/>
+                        <outlet property="wedgeCalc" destination="ykp-O6-LPd" id="v8q-uX-tsg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="64" y="-575"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="u9d-c3-9S4">
+            <objects>
+                <viewController id="LLO-bo-Hc5" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ifh-mQ-hPS"/>
+                        <viewControllerLayoutGuide type="bottom" id="Uqi-oZ-xCP"/>
+                    </layoutGuides>
+                    <view key="view" tag="1" contentMode="scaleToFill" id="BNh-VL-OwV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fBu-1n-sBX">
+                                <rect key="frame" x="20" y="39" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stepper opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="183" maximumValue="250" translatesAutoresizingMaskIntoConstraints="NO" id="LmS-7D-DRA">
+                                <rect key="frame" x="113" y="120" width="94" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <action selector="onChange:" destination="LLO-bo-Hc5" eventType="valueChanged" id="89b-OT-6vQ"/>
+                                </connections>
+                            </stepper>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="wedge.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="cPd-kC-bZ9">
+                                <rect key="frame" x="20" y="205" width="88" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Iron.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="pO3-7W-4k8">
+                                <rect key="frame" x="116" y="205" width="88" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="driver.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="dSb-K8-U0w">
+                                <rect key="frame" x="212" y="205" width="88" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k2d-60-CoT">
+                                <rect key="frame" x="55" y="358" width="211" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Calculate Distance">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toCalc:" destination="LLO-bo-Hc5" eventType="touchUpInside" id="dfd-5V-tJm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNz-Hn-L22">
+                                <rect key="frame" x="278" y="398" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="getAuthor:" destination="LLO-bo-Hc5" eventType="touchUpInside" id="DwT-Gx-sqv"/>
+                                    <segue destination="akg-F0-l9g" kind="modal" modalTransitionStyle="crossDissolve" id="QTc-IU-gn6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pRE-WE-Tj6">
+                                <rect key="frame" x="35" y="306" width="58" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Wedge">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toClick:" destination="LLO-bo-Hc5" eventType="touchUpInside" id="zLE-mf-GBI"/>
+                                    <segue destination="vXZ-lx-hvc" kind="modal" modalTransitionStyle="crossDissolve" id="CJM-cC-4ic"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJg-YB-1Lp">
+                                <rect key="frame" x="135" y="306" width="50" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Iron">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toClick:" destination="LLO-bo-Hc5" eventType="touchUpInside" id="Z0I-XD-qgc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLR-TE-QdR">
+                                <rect key="frame" x="227" y="306" width="59" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Driver">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toClick:" destination="LLO-bo-Hc5" eventType="touchUpInside" id="Hep-7P-yUI"/>
+                                    <segue destination="Sbr-IZ-Hl1" kind="modal" modalTransitionStyle="crossDissolve" id="ATL-FQ-SXg"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="BZh-di-1AZ">
+                                <rect key="frame" x="0.0" y="451" width="320" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Wedge"/>
+                                    <segment title="Iron"/>
+                                    <segment title="Driver"/>
+                                </segments>
+                                <connections>
+                                    <action selector="onSegment:" destination="LLO-bo-Hc5" eventType="valueChanged" id="YV6-Pd-zLk"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="clubSegment" destination="BZh-di-1AZ" id="SHu-r5-311"/>
+                        <outlet property="driButton" destination="dLR-TE-QdR" id="q7Y-6Q-jSC"/>
+                        <outlet property="iroButton" destination="eJg-YB-1Lp" id="97w-ZI-sYW"/>
+                        <outlet property="iroText" destination="fBu-1n-sBX" id="hey-7e-eAo"/>
+                        <outlet property="ironCalc" destination="k2d-60-CoT" id="PJr-Sy-Y5x"/>
+                        <outlet property="stepControl" destination="LmS-7D-DRA" id="2MM-JU-ZSP"/>
+                        <outlet property="stepperText" destination="fBu-1n-sBX" id="bTs-QF-2ef"/>
+                        <outlet property="wedButton" destination="pRE-WE-Tj6" id="yf0-Ss-wDk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L12-4C-ToI" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="450" y="-575"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Mvg-1f-cic">
+            <objects>
+                <viewController id="Sbr-IZ-Hl1" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="X8y-Bf-Zb7"/>
+                        <viewControllerLayoutGuide type="bottom" id="V59-un-gMN"/>
+                    </layoutGuides>
+                    <view key="view" tag="1" contentMode="scaleToFill" id="8V1-2R-Z7A">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7qq-tD-86d">
+                                <rect key="frame" x="20" y="39" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stepper opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="9" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Hfs-JT-Ug1">
+                                <rect key="frame" x="113" y="120" width="94" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <action selector="onChange:" destination="Sbr-IZ-Hl1" eventType="touchUpInside" id="9n0-Sf-iFC"/>
+                                </connections>
+                            </stepper>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wi4-2R-cHW">
+                                <rect key="frame" x="20" y="205" width="88" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a6o-WF-b5m">
+                                <rect key="frame" x="116" y="205" width="88" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aJn-rs-Ef8">
+                                <rect key="frame" x="212" y="205" width="88" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BtZ-6F-aLG">
+                                <rect key="frame" x="55" y="362" width="211" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Calculate Distance">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toCalc:" destination="Sbr-IZ-Hl1" eventType="touchUpInside" id="KKq-lU-eA1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ms-a6-C0E">
+                                <rect key="frame" x="274" y="388" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="getAuthor:" destination="Sbr-IZ-Hl1" eventType="touchUpInside" id="Wew-XG-Idc"/>
+                                    <segue destination="akg-F0-l9g" kind="modal" modalTransitionStyle="crossDissolve" id="gu5-XK-DPA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uVs-Pz-cbj">
+                                <rect key="frame" x="35" y="305" width="58" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Wedge">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toClick:" destination="Sbr-IZ-Hl1" eventType="touchUpInside" id="f3l-tB-64C"/>
+                                    <segue destination="vXZ-lx-hvc" kind="modal" modalTransitionStyle="crossDissolve" id="jMy-xa-F5w"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBD-H0-Ixm">
+                                <rect key="frame" x="135" y="305" width="50" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Iron">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toClick:" destination="Sbr-IZ-Hl1" eventType="touchUpInside" id="vBz-3C-VFZ"/>
+                                    <segue destination="LLO-bo-Hc5" kind="modal" modalTransitionStyle="crossDissolve" id="EnE-rJ-P9E"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lqf-9E-2Mm">
+                                <rect key="frame" x="227" y="305" width="59" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Driver">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toClick:" destination="Sbr-IZ-Hl1" eventType="touchUpInside" id="QIM-mZ-z7J"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="YQD-2F-RTn">
+                                <rect key="frame" x="0.0" y="450" width="320" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Wedge"/>
+                                    <segment title="Iron"/>
+                                    <segment title="Driver"/>
+                                </segments>
+                                <connections>
+                                    <action selector="onPush:" destination="Sbr-IZ-Hl1" eventType="touchUpInside" id="b0K-nn-OLj"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="driButton" destination="Lqf-9E-2Mm" id="AOp-Sb-RO6"/>
+                        <outlet property="driText" destination="7qq-tD-86d" id="DTX-ud-N8l"/>
+                        <outlet property="driverCalc" destination="BtZ-6F-aLG" id="Kuf-Ay-f6E"/>
+                        <outlet property="iroButton" destination="eBD-H0-Ixm" id="rBT-vz-bcl"/>
+                        <outlet property="stepControl" destination="Hfs-JT-Ug1" id="hSD-Ch-xEX"/>
+                        <outlet property="stepperText" destination="7qq-tD-86d" id="JdJ-g6-G2C"/>
+                        <outlet property="wedButton" destination="uVs-Pz-cbj" id="DB5-bg-GFF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HEm-MO-sFc" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="84"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="o5F-p0-YCu">
+            <objects>
+                <viewController id="akg-F0-l9g" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jCI-Ox-rAu"/>
+                        <viewControllerLayoutGuide type="bottom" id="0bM-Qr-u7y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="djW-FT-da2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="By: Steven Roseman" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8R1-fm-1Rm">
+                                <rect key="frame" x="57" y="156" width="202" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjp-65-r1k">
+                                <rect key="frame" x="0.0" y="20" width="81" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="getAuthor:" destination="akg-F0-l9g" eventType="touchUpInside" id="Jbs-eH-GMu"/>
+                                    <segue destination="vXZ-lx-hvc" kind="modal" modalTransitionStyle="crossDissolve" id="q6R-VU-xUf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="8R1-fm-1Rm" id="yVP-Yc-oQf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kpu-Bj-TSr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="385" y="84"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Y8j-7h-vOq">
+            <objects>
+                <viewController id="iEB-iY-aj0" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="crT-pd-iv0"/>
+                        <viewControllerLayoutGuide type="bottom" id="dYH-Z4-z8l"/>
+                    </layoutGuides>
+                    <view key="view" tag="1" contentMode="scaleToFill" id="WrJ-tq-IfX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f0k-N8-dS9">
+                                <rect key="frame" x="20" y="39" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stepper opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="9" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="b1G-zH-nef">
+                                <rect key="frame" x="113" y="120" width="94" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <action selector="onChange:" destination="iEB-iY-aj0" eventType="touchUpInside" id="Lkn-mv-wMt"/>
+                                </connections>
+                            </stepper>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="wedge.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Ym9-D8-STK">
+                                <rect key="frame" x="20" y="205" width="88" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Iron.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vGM-gt-Jmb">
+                                <rect key="frame" x="116" y="205" width="88" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="driver.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="DKw-04-Tyx">
+                                <rect key="frame" x="212" y="205" width="88" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y1Z-LN-cGf">
+                                <rect key="frame" x="55" y="398" width="211" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Calculate Distance">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toCalc:" destination="iEB-iY-aj0" eventType="touchUpInside" id="jTy-kF-er2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1p0-V5-pjk">
+                                <rect key="frame" x="270" y="457" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="getAuthor:" destination="iEB-iY-aj0" eventType="touchUpInside" id="dGt-Xe-buu"/>
+                                    <segue destination="akg-F0-l9g" kind="modal" modalTransitionStyle="crossDissolve" id="DB2-q0-COA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PEy-et-ccD">
+                                <rect key="frame" x="35" y="322" width="58" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Wedge">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toClick:" destination="iEB-iY-aj0" eventType="touchUpInside" id="X01-5v-CHY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PR1-ej-nf7">
+                                <rect key="frame" x="135" y="322" width="50" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Iron">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toClick:" destination="iEB-iY-aj0" eventType="touchUpInside" id="5pX-F0-518"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AlP-Nn-1Wi">
+                                <rect key="frame" x="227" y="322" width="59" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Driver">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toClick:" destination="iEB-iY-aj0" eventType="touchUpInside" id="Csj-vq-Zcw"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="z3M-V7-COi">
+                                <rect key="frame" x="0.0" y="540" width="320" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Wedge"/>
+                                    <segment title="Iron"/>
+                                    <segment title="Driver"/>
+                                </segments>
+                                <connections>
+                                    <action selector="onSegment:" destination="iEB-iY-aj0" eventType="valueChanged" id="sLc-zw-b3p"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="driButton" destination="AlP-Nn-1Wi" id="Ffw-Tx-zBF"/>
+                        <outlet property="driText" destination="f0k-N8-dS9" id="AQf-fP-NFB"/>
+                        <outlet property="driverCalc" destination="Y1Z-LN-cGf" id="qtl-Cu-5gI"/>
+                        <outlet property="iroButton" destination="PR1-ej-nf7" id="NrV-Dv-QwB"/>
+                        <outlet property="stepControl" destination="b1G-zH-nef" id="FbD-bg-Afn"/>
+                        <outlet property="stepperText" destination="f0k-N8-dS9" id="gLS-XJ-0km"/>
+                        <outlet property="wedButton" destination="PEy-et-ccD" id="5Td-rg-uVn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mr1-gH-Yas" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="84"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Iron.jpg" width="107" height="160"/>
+        <image name="driver.jpg" width="106" height="160"/>
+        <image name="wedge.jpg" width="160" height="104"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="ATL-FQ-SXg"/>
+        <segue reference="blF-UX-aEI"/>
+        <segue reference="CJM-cC-4ic"/>
+        <segue reference="DB2-q0-COA"/>
+    </inferredMetricsTieBreakers>
+</document>
