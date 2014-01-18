@@ -11,6 +11,7 @@
 @interface ViewController : UIViewController
 
 {
+    //Outlets for Golf Club Swing
     IBOutlet UIButton *wedButton;
     IBOutlet UIButton *iroButton;
     IBOutlet UIButton *driButton;

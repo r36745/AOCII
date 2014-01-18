@@ -15,12 +15,13 @@
 
 @implementation ViewController
 
-
+//method to switch view screens
 -(IBAction)onExit:(UIStoryboardSegue*)segue
 {
     
 }
 
+//Click button method for subclass buttons
 -(IBAction)toClick:(id)sender
 {
     
@@ -57,7 +58,7 @@
     }
 }
 
-
+//Segment Control method called for changing colors
 -(IBAction)onSegment:(id)sender
 {
     UISegmentedControl *segControl = (UISegmentedControl*)sender;
@@ -81,7 +82,7 @@
     
 }
 
-
+//Steppper Method for increasing/decreasing resulted values
 -(IBAction)onChange:(id)sender
 {
     UIStepper *stepper = (UIStepper*)sender;
@@ -112,6 +113,7 @@
         
 }
 
+//calculation method
 -(IBAction)toCalc:(id)sender
 {
     
@@ -167,6 +169,7 @@
     }
 }
 
+//Method used to show Author name
 -(IBAction)getAuthor:(id)sender
 {
     
