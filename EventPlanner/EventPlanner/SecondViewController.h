@@ -20,7 +20,13 @@
 
 {
     id<SecondView>delegate;
+    IBOutlet UITextField *storyField;
+    IBOutlet UIDatePicker *datePicker;
+    
+    
 }
+
+-(IBAction)buttonPressed:(id)sender;
 
 @property (strong) id<SecondView>delegate;
 

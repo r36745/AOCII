@@ -17,7 +17,7 @@
 
 -(void)eventDetail:(NSString *)eventInfo
 {
-    textView.text = eventInfo;
+   // textView.text = eventInfo;
 }
 
 -(IBAction)onChange:(UIStoryboardSegue*)segue
@@ -30,27 +30,7 @@
 
 
 
--(IBAction)onClick:(id)sender
-{
-    UIButton *pushButton = (UIButton*)sender;
-    {
-        if (pushButton != nil)
-        {
-            SecondViewController *viewControl = [[SecondViewController alloc]initWithNibName:@"SecondView" bundle:nil];
-            {
-             if (viewControl != nil)
-             {
-                 viewControl.delegate = self;
-                 NSString *tempStr = eventField.text;
-                 textView.text = [NSString stringWithFormat:@"%@", tempStr];
-                 
-              
-                 //[self.view addSubview:textView];
-             }
-            }
-        }
-    }
-}
+
 
 - (void)viewDidLoad
 {

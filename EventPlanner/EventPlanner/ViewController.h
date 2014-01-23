@@ -14,12 +14,11 @@
 {
     IBOutlet UITextView *textView;
     IBOutlet UITextField *eventField;
-   
 }
 
 -(IBAction)onChange:(UIStoryboardSegue*)segue;
 
--(IBAction)onClick:(id)sender;
+
 
 
 

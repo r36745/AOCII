@@ -15,14 +15,25 @@
 @implementation SecondViewController
 @synthesize delegate;
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        //delegate = nil;
+        // Custom initialization
+    }
+    return self;
+}
+
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
 {
+    storyField.text = @"";
     return true;
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-   
+    
     if (delegate != nil)
     {
         [delegate eventDetail:textField.text];
@@ -30,17 +41,24 @@
     return true;
 }
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+-(IBAction)buttonPressed:(id)sender
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
+    UIButton *saveButton = (UIButton*)sender;
+    {
+        
+        if (saveButton != nil)
+        {
+            NSString *tempStr = storyField.text;
+            
+        }
     }
-    return self;
 }
 
 - (void)viewDidLoad
 {
+    
+    storyField.text = @"Enter Date and Time";
+    storyField.textColor = [UIColor lightGrayColor];
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
